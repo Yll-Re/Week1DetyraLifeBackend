@@ -1,5 +1,4 @@
 ﻿using ClassLibrary1.Enum;
-using System;
 using System.Reflection;
 
 namespace ClassLibrary1
@@ -52,7 +51,6 @@ namespace ClassLibrary1
         {
             List<string> missingParts = new List<string>();
 
-            // Per qita me properties qe ke me bo loop pak sus
             PropertyInfo[] properties = GetType().GetProperties();
             foreach (PropertyInfo property in properties)
             {
@@ -70,7 +68,7 @@ namespace ClassLibrary1
             return missingParts;
         }
 
-        // overenginering
+        // overenginering se masi tu e marr property.name dilke missing "DoorsAdded"
         private string getPropertyName(string propertyName)
         {
             switch (propertyName)

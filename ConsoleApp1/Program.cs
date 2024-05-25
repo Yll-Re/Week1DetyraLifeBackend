@@ -37,6 +37,8 @@ namespace ConsolApp1
 
         }
 
+        // Normal qito functions i kisha bo jasht program.cs, ama sipas detyres duhet mi bo qitu? ose sdi me lexu mir
+
         static void checkCar(Auto car)
         {
             List<string> missingParts = car.getMissingParts();
@@ -105,7 +107,7 @@ namespace ConsolApp1
             Console.WriteLine($"Paga Neto: {pagaNeto}");
         }
 
-        // Neto to bruto o pej videos nfund qe e kallxoj gjysen e kodit kinda
+        // Neto to bruto o me "magic numbers" pej videos nfund qe e kallxoj gjysen e kodit kinda
         static void netoToBruto(double pagaNeto)
         {
             double punedhensiPension = 0.05;
@@ -130,7 +132,7 @@ namespace ConsolApp1
             }
             else
             {
-                pagaTatueshme = 450 + (pagaNeto - 427.4) / 0.9;
+                pagaTatueshme = 450 + (pagaNeto - 427.2) / 0.9;
                 pagaBruto = pagaTatueshme / (1 - punedhensiPension);
             }
 
